@@ -5,6 +5,7 @@ import http from "http";
 import connectDB from "./config/db";
 
 import authRoutes from "./routes/authRoutes";
+import userRoutes from "./routes/userRoutes";
 import patientRoutes from "./routes/patientRoutes";
 import doctorRoutes from "./routes/doctorRoutes";
 import appointmentRoutes from "./routes/appointmentRoutes";
@@ -22,6 +23,7 @@ app.use(cors());
 app.use(express.json());
 
 app.use("/api/auth", authRoutes);
+app.use("/api/users", userRoutes);
 app.use("/api/patient", patientRoutes);
 app.use("/api/doctor", doctorRoutes);
 app.use("/api/appointment", appointmentRoutes);
